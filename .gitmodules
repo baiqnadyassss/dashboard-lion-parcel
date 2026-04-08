@@ -1,0 +1,2 @@
+[submodule "dashboard"]
+	url = https://github.com/YOUR_ORG/dashboard.git
