@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lion Parcel x GetFound - Hotel Acquisition Dashboard",
+  title: "Lion Parcel - Hotel Acquisition Dashboard",
   description: "Pipeline achievement dashboard for Hotel Acquisition Bali",
 };
 
