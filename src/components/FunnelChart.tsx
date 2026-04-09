@@ -13,11 +13,11 @@ export default function FunnelChart() {
             Pipeline Funnel
           </h2>
           <p className="text-sm text-gray-500 mt-1">
-            Lead to Closed Won conversion flow
+            Outreach to Closed Won conversion flow
           </p>
         </div>
         <span className="text-xs font-medium bg-indigo-50 text-indigo-600 px-3 py-1.5 rounded-full">
-          Overall: {((53 / 7516) * 100).toFixed(2)}% conversion
+          Overall: {((53 / 1954) * 100).toFixed(2)}% conversion
         </span>
       </div>
 
@@ -83,16 +83,23 @@ export default function FunnelChart() {
       </div>
 
       {/* Conversion rate cards */}
-      <div className="grid grid-cols-3 gap-3 mt-8 pt-6 border-t border-gray-100">
-        {conversionRates.map((cr) => (
-          <div
-            key={cr.from}
-            className="text-center p-3 rounded-xl bg-gray-50"
-          >
-            <p className="text-xs text-gray-500 mb-1">{cr.from}</p>
-            <p className="text-lg font-bold text-gray-800">{cr.rate}%</p>
-          </div>
-        ))}
+      <div className="mt-8 pt-6 border-t border-gray-100 space-y-3">
+        <div className="grid grid-cols-3 gap-3">
+          {conversionRates.slice(0, 3).map((cr) => (
+            <div key={cr.from} className="text-center p-3 rounded-xl bg-gray-50">
+              <p className="text-xs text-gray-500 mb-1">{cr.from}</p>
+              <p className="text-lg font-bold text-gray-800">{cr.rate}%</p>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          {conversionRates.slice(3).map((cr) => (
+            <div key={cr.from} className="text-center p-3 rounded-xl bg-gray-50">
+              <p className="text-xs text-gray-500 mb-1">{cr.from}</p>
+              <p className="text-lg font-bold text-gray-800">{cr.rate}%</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
